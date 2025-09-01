@@ -25,8 +25,28 @@ html {
   box-sizing: border-box;
 }
 
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  body {
+    padding: 0 2rem;
+  }
+  .section--sign-up {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  .footer {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: #444;
   line-height: 1.9;
@@ -124,10 +144,20 @@ img {
   z-index: 100;
 }
 
+@media only screen and (max-width: 50em) {
+  .nav {
+    padding: 0;
+  }
+}
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
+}
+@media only screen and (max-width: 50em) {
+  .nav.sticky {
+    padding: 0 2rem;
+  }
 }
 
 .nav__logo {
@@ -168,6 +198,12 @@ img {
   color: inherit;
   background-color: var(--color-primary-darker);
   color: #333;
+}
+
+@media only screen and (max-width: 44rem) {
+  .nav__link {
+    content: "join";
+  }
 }
 
 /* HEADER */
@@ -216,7 +252,7 @@ h4 {
 
 .highlight::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -235,9 +271,27 @@ h4 {
   gap: 4rem;
   margin: 0 12rem;
 }
+@media only screen and (max-width: 50em) {
+  .features {
+    margin: 0 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
 
 .features__img {
   width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .features__img--2 {
+    grid-row: 3/4;
+  }
 }
 
 .features__feature {
@@ -320,6 +374,11 @@ h4 {
   /* JUST PRESENTATIONAL */
   font-size: 1.7rem;
   padding: 2.5rem 7rem 6.5rem 7rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .operations__content {
+    padding: 1rem 0 3rem 0;
+  }
 }
 
 .operations__content--active {
@@ -470,7 +529,7 @@ h4 {
 }
 
 .testimonial::before {
-  content: '\201C';
+  content: "\201C";
   position: absolute;
   top: -5.7rem;
   left: -6.8rem;
