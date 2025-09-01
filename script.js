@@ -250,6 +250,7 @@ const slider = function () {
     }
   });
 };
+slider();
 function handleResize() {
   const link = document.querySelector(".nav__link--btn");
 
